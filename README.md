@@ -1,12 +1,31 @@
 <div align="center">
 
-# YouTube Engagement Performance Analysis
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=300&section=header&text=YouTube%20Analytics%20Dashboard&fontSize=48&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Transforming%20Raw%20Trending%20Data%20into%20Strategic%20Intelligence&descAlignY=58&descSize=18" width="100%"/>
 
-<p>
-  <strong>A professional analytics solution for evaluating YouTube reach, engagement efficiency, creator performance, audience sentiment, and content-language patterns.</strong>
-</p>
+</div>
 
-<p>
+<div align="center">
+
+<!-- <table>
+<tr>
+<td align="center">
+<a href="https://youtube-data-analysis.streamlit.app/">
+<img src="https://img.shields.io/badge/🚀%20LIVE%20APP-Streamlit%20Deploy-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white"/>
+</a>
+</td>
+<td align="center">
+<img src="https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white"/>
+</td>
+<td align="center">
+<img src="https://img.shields.io/badge/Jupyter-Notebook-F37626?style=for-the-badge&logo=jupyter&logoColor=white"/>
+</td>
+<td align="center">
+<img src="https://img.shields.io/badge/Status-Active-00C851?style=for-the-badge"/>
+</td>
+</tr>
+</table> -->
+
+p>
   <a href="https://www.linkedin.com/in/mir-shahadut-hossain/"><img src="https://img.shields.io/badge/LinkedIn-Mir%20Shahadut%20Hossain-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
   <a href="https://github.com/doyancha"><img src="https://img.shields.io/badge/GitHub-doyancha-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"></a>
   <a href="mailto:sujon6901@gmail.com"><img src="https://img.shields.io/badge/Email-sujon6901%40gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"></a>
@@ -20,6 +39,24 @@
   <img src="https://img.shields.io/badge/Plotly-Interactive%20Visuals-3F4F75?style=flat-square&logo=plotly&logoColor=white" alt="Plotly">
   <img src="https://img.shields.io/badge/Seaborn-Statistical%20Charts-4C72B0?style=flat-square" alt="Seaborn">
 </p>
+
+
+</div>
+
+---
+
+<div align="center">
+
+## ⚡ THE CORE QUESTION
+
+```
+╔══════════════════════════════════════════════════════════════════════════╗
+║                                                                          ║
+║   How does YouTube content convert VISIBILITY into ENGAGEMENT            ║
+║                   and AUDIENCE RESPONSE?                                 ║
+║                                                                          ║
+╚══════════════════════════════════════════════════════════════════════════╝
+```
 
 </div>
 
@@ -35,149 +72,361 @@ The app combines engagement metrics, creator/category comparisons, correlation a
 
 ---
 
-## Repository Description
+## 📌 Table of Contents
 
-An interactive YouTube analytics solution built with Streamlit to evaluate content reach, engagement efficiency, creator performance, audience sentiment, and text-based comment patterns using large-scale trending video data.
-
----
-
-## Skills Demonstrated
-
-- Data cleaning and transformation with Pandas
-- Exploratory data analysis and metric engineering
-- Engagement-rate analysis and correlation modeling
-- Sentiment analysis using comment-level text
-- Word cloud and keyword frequency analysis
-- Interactive dashboard development with Streamlit
-- Data storytelling and business insight communication
-- UI/UX design for analytical web applications
-- Dashboard performance optimization and filter architecture
-- GitHub-ready project documentation and presentation
+| # | Section |
+|---|---------|
+| 01 | [🎯 Project Intention & Goals](#-project-intention--goals) |
+| 02 | [📊 Dataset at a Glance](#-dataset-at-a-glance) |
+| 03 | [🔬 Analysis Modules](#-analysis-modules) |
+| 04 | [💡 Key Findings](#-key-findings) |
+| 05 | [🧠 Technical Pipeline](#-technical-pipeline) |
+| 06 | [📁 Repository Structure](#-repository-structure) |
+| 07 | [🚀 Run Locally](#-run-locally) |
+| 08 | [📸 Dashboard Preview](#-dashboard-preview) |
+| 09 | [👤 About the Author](#-about-the-author) |
+| 10 | [📚 Suggested Resources](#-suggested-resources) |
 
 ---
 
-## Project Highlights
+## 🎯 Project Intention & Goals
 
-<table>
-  <tr>
-    <td><strong>Trending Video Records</strong><br>679,050</td>
-    <td><strong>Categories</strong><br>17</td>
-    <td><strong>Channels</strong><br>48,183</td>
-    <td><strong>Comment Records</strong><br>691,400</td>
-  </tr>
-  <tr>
-    <td><strong>Total Views</strong><br>833.11B</td>
-    <td><strong>Total Likes</strong><br>23.46B</td>
-    <td><strong>Total Comments</strong><br>2.63B</td>
-    <td><strong>Views vs Likes Correlation</strong><br>0.78</td>
-  </tr>
-</table>
+> This project was built to go **beyond surface-level metrics** — treating YouTube's trending data not as a curiosity, but as a mirror into how digital content earns and sustains public attention.
 
----
+### 🔭 What This Project Sets Out To Do
 
-## Business Question
+- 📌 **Decode engagement dynamics** — understand whether a video truly *earns* its views or just stumbles into them
+- 📌 **Profile creator momentum** — identify channels that trend repeatedly versus those with one-off spikes
+- 📌 **Measure category efficiency** — determine which content categories convert visibility into actual engagement most effectively
+- 📌 **Analyze audience sentiment** — go beyond likes/dislikes to understand the *emotional tone* of comment sections at scale
+- 📌 **Explore language signals** — investigate whether structural cues in video titles (like punctuation) correlate with stronger audience reactions
+- 📌 **Build a production-grade dashboard** — not just a notebook, but a fully deployed, stakeholder-ready analytics application
+- 📌 **Demonstrate end-to-end data storytelling** — from raw CSV ingestion to interactive visual narrative
 
-The dashboard is designed to answer the following strategic questions:
+### 🧩 Business Questions Addressed
 
-- Which content categories convert views into stronger engagement?
-- Which creators sustain repeated trending visibility over time?
-- How strongly do reach and approval move together?
-- What does comment sentiment suggest about audience reception?
-- Do content-language cues such as punctuation relate to stronger reaction patterns?
+- Which content categories drive the strongest **like rates**?
+- Which creators sustain **repeated trending** presence over time?
+- How strongly are **reach and approval** correlated — and where do they diverge?
+- What does **comment sentiment** reveal about audience reception beyond raw counts?
+- Do **title punctuation patterns** influence engagement metrics?
 
 ---
 
-## Key Findings
+## 📊 Dataset at a Glance
 
-### 1. Reach and approval are strongly related, but not identical
+<div align="center">
 
-The relationship between **views** and **likes** is strong, with a correlation of **0.78**. This indicates that visibility remains a major driver of public engagement, but some videos convert exposure into likes more efficiently than others.
+| 📹 Metric | 📈 Value |
+|-----------|----------|
+| **Trending Video Records** | 679,050 |
+| **Unique Channels** | 48,183 |
+| **Comment Records** | 691,400 |
+| **Content Categories** | 17 |
+| **Total Views** | 833.11 Billion |
+| **Total Likes** | 23.46 Billion |
+| **Total Comments** | 2.63 Billion |
+| **Views ↔ Likes Correlation** | **0.78** |
+| **Countries Covered** | Multiple (US, UK, CA, RU & more) |
 
-### 2. Category efficiency matters
+</div>
 
-The leading category by average **Like Rate** is **Howto & Style**, showing that engagement quality depends not only on creator scale, but also on category fit and content format.
+### 🗂️ Data Sources Used
 
-### 3. Trending momentum is not random
-
-The channel with the highest recurring trending presence is **The Late Show with Stephen Colbert**, appearing **710** times in the dataset. This suggests durable creator-level momentum rather than isolated viral spikes.
-
-### 4. Creator scale still dominates raw reach
-
-The top channel by accumulated views is **NickyJamTV**, reinforcing the role of creator brand strength in sustained large-scale visibility.
-
-### 5. Sentiment adds context beyond raw interaction
-
-Comment-based analysis helps distinguish healthy engagement from potentially controversial engagement by identifying the emotional tone of the audience response.
-
-### 6. Packaging signals may influence reaction
-
-Punctuation count is treated as a supporting behavioral signal rather than a primary performance driver. It can indicate expressive formatting patterns that may align with stronger audience reaction.
-
----
-
-## Dashboard Experience
-
-The Streamlit app is organized into focused pages rather than a single overloaded screen:
-
-### Overview
-
-- Executive KPIs
-- Relationship between Views and Likes
-- Top channels by trending frequency
-- Correlation heatmap
-- High-level summary cards
-
-### Content Patterns
-
-- Reach-to-engagement behavior
-- Category-wise Like Rate distributions
-- Punctuation impact analysis
-- Supporting insight callouts
-
-### Channel & Category Explorer
-
-- Sticky category selector
-- Sticky top-channel filter panel
-- Filtered KPI strip
-- Filtered creator/category comparisons
-- Filtered reach vs engagement chart
-
-### Audience Sentiment
-
-- Comment sentiment mix
-- Sentiment score distribution
-- Punctuation impact on views, likes, dislikes, and comments
-
-### Word Clouds
-
-- Positive comment word cloud
-- Negative comment word cloud
-- Most frequent positive terms
-- Most frequent negative terms
-
-### Final Takeaway
-
-- Strategic interpretation of the full analysis
-- Recommendation cards for content direction, creator benchmarking, and engagement evaluation
+| File | Purpose |
+|------|---------|
+| `full_df.csv` | Primary enriched video dataset (views, likes, dislikes, rates, punc_count) |
+| `comments_data.csv` | Comment-level text for sentiment & word cloud analysis |
+| `*_category_id.json` | Maps numeric category IDs to human-readable names |
+| `data/youtube_videos.parquet` | Deployment-optimized video data (compressed) |
+| `data/comments_sentiment.parquet` | Pre-scored comments for fast cloud loading |
 
 ---
 
-## Visual Design Direction
+## 🔬 Analysis Modules
 
-The application is designed as a **dark, neon-glossy analytics interface** with:
+The notebook is organized into **11 distinct analytical sections**, each building on the previous:
 
-- glossy glassmorphism cards
-- blue-violet neon accents
-- premium KPI panels
-- high-contrast typography
-- responsive layout structure
-- recruiter-friendly storytelling flow
+---
 
-The visual system is intentionally styled to feel more like a modern BI product than a standard notebook export.
+### 🧹 Module 1 — Data Ingestion & Cleaning
+> *Foundation before insight.*
+
+- Multi-country CSV loading with encoding handling (`utf-8`, `latin-1`, `ISO-8859-1`)
+- Null detection and removal via `dropna()`
+- Deduplication across merged country datasets
+- Export pipeline: `.csv` → `.json` → MySQL DB via SQLAlchemy
+
+---
+
+### 💬 Module 2 — Sentiment Analysis
+> *What does the audience actually feel?*
+
+- NLTK **VADER** (Valence Aware Dictionary and sEntiment Reasoner) for comment scoring
+- Compound score range: `−1.0` (most negative) → `+1.0` (most positive)
+- Classification thresholds:
+  - **Positive:** `score ≥ 0.5`
+  - **Negative:** `score ≤ −0.5`
+- Applied to 691,400+ comment records
+
+```python
+def get_sentiment(text):
+    score = analyzer.polarity_scores(str(text))
+    return score['compound']
+
+df['sentiment_score'] = df['comment_text'].apply(get_sentiment)
+```
+
+---
+
+### ☁️ Module 3 — Word Cloud Generation
+> *What language defines positive vs. negative engagement?*
+
+- Separated corpora: positive comments vs. negative comments
+- Stop-word filtering using `wordcloud.STOPWORDS`
+- Side-by-side 18×7 matplotlib visualization
+- Reveals dominant vocabulary patterns in audience reactions
+
+---
+
+### 😄 Module 4 — Emoji Frequency Analysis
+> *The unspoken language of YouTube comments.*
+
+- Emoji extraction using the `emoji` library's `emoji_list()` function
+- Top-10 most-used emojis ranked by frequency
+- Interactive Plotly bar chart for visual exploration
+- Provides cultural and emotional context beyond text
+
+---
+
+### 🗺️ Module 5 — Multi-Country Data Merge
+> *Scale before depth.*
+
+- Iterates all `*videos.csv` files from multiple country datasets
+- Unified `full_df` DataFrame with consistent schema
+- Shape validation post-merge
+
+---
+
+### 🏷️ Module 6 — Category Enrichment
+> *Numbers mean nothing without context.*
+
+- Parsed `_category_id.json` to build `cat_dict = {id: name}`
+- Mapped numeric IDs to readable labels (e.g., `10` → `"Music"`)
+- Seaborn strip plot of `likes` distribution per category
+
+---
+
+### 📐 Module 7 — Engagement Rate Engineering
+> *Raw counts lie. Rates tell the truth.*
+
+Three derived metrics computed as a percentage of views:
+
+```
+like_rate          = (likes / views) × 100
+dislike_rate       = (dislikes / views) × 100
+comment_count_rate = (comment_count / views) × 100
+```
+
+- 1×3 subplot grid showing rate distributions per category
+- Reveals hidden performers vs. inflated-view content
+
+---
+
+### 🔗 Module 8 — Correlation Analysis
+> *How tightly do these signals move together?*
+
+- Pearson correlation matrix: `views`, `likes`, `dislikes`
+- Seaborn `regplot` for `views` vs `likes` with regression line
+- Annotated heatmap for full numeric intuition
+
+---
+
+### 📺 Module 9 — Channel Trending Analysis
+> *Who dominates the trending tab — and how often?*
+
+- `value_counts()` on `channel_title` across all records
+- Top 20 most-trending channels ranked
+- Interactive Plotly bar chart with color gradient by count
+
+---
+
+### ✏️ Module 10 — Punctuation Analysis
+> *Does expressive formatting drive stronger reactions?*
+
+```python
+def punctuation_count(text):
+    return len([char for char in text if char in string.punctuation])
+
+full_df['punc_count'] = full_df['title'].apply(punctuation_count)
+```
+
+- 2×2 subplot grid: `punc_count` vs `views`, `likes`, `dislikes`, `comment_count`
+- Treated as a behavioral signal, not a primary driver
+
+---
+
+### 💾 Module 11 — Export & Deployment Packaging
+> *From notebook to production.*
+
+- `build_deployment_data.py` script packages raw data into compressed Parquet files
+- Eliminates need to upload 600MB+ CSV to cloud
+- Streamlit app detects `data/*.parquet` and loads from there automatically
+
+---
+
+## 💡 Key Findings
+
+> Here's what the data actually says — straight from the analysis.
+
+### 🔑 Finding 1 — Views & Likes Move Together, But Not Perfectly
+The correlation between views and likes is **0.78** — strong, but not deterministic. Some videos accumulate massive view counts without proportional likes, suggesting passive viewership. The best-performing content earns *active* approval, not just passive impressions.
+
+### 🔑 Finding 2 — Category Efficiency Matters More Than Scale
+**Howto & Style** leads all categories in average Like Rate. This means content that *teaches* tends to generate more deliberate, appreciative engagement — even when raw view counts are modest compared to Entertainment or Music.
+
+### 🔑 Finding 3 — Trending Success Is Not Random
+The channel with the highest recurring trending count was **The Late Show with Stephen Colbert** — appearing **710 times** in the dataset. This points to durable creator-level momentum, not viral luck. Consistent content cadence compounds into algorithmic staying power.
+
+### 🔑 Finding 4 — Creator Brand Drives Raw Reach
+**NickyJamTV** led in total accumulated views. At the top of the distribution, raw reach is overwhelmingly driven by creator brand strength rather than category or title optimization.
+
+### 🔑 Finding 5 — Sentiment Adds a Layer Beyond Raw Metrics
+Positive comments are dominated by words of admiration and entertainment. Negative comments cluster around criticism and controversy. High like counts alone can mask a divided comment section — sentiment analysis is the corrective lens.
+
+### 🔑 Finding 6 — Title Punctuation as a Behavioral Signal
+Videos with moderate punctuation in titles show marginally higher engagement across all metrics. However, this is a *supporting signal* — expressive formatting may correlate with a certain content personality type rather than directly causing engagement.
+
+---
+
+## 🧠 Technical Pipeline
+
+```
+Raw CSVs (Multi-Country)
+        │
+        ▼
+   Data Cleaning ──────────────────────────────────────────────┐
+   (null removal, dedup, encoding handling)                    │
+        │                                                       │
+        ▼                                                       ▼
+Feature Engineering                                    Comment Processing
+(like_rate, dislike_rate,                           (VADER sentiment scoring,
+ comment_count_rate, punc_count,                     word cloud generation,
+ category_name mapping)                              emoji frequency analysis)
+        │                                                       │
+        └───────────────────┬───────────────────────────────────┘
+                            │
+                            ▼
+                   Analysis & Visualization
+              (Seaborn, Matplotlib, Plotly)
+                            │
+                            ▼
+                  Export & Packaging
+             (CSV, JSON, MySQL, Parquet)
+                            │
+                            ▼
+               Streamlit Dashboard (6 Pages)
+              youtube-data-analysis.streamlit.app
+```
+
+### 🛠️ Tech Stack
+
+| Layer | Tools |
+|-------|-------|
+| **Data Wrangling** | `pandas`, `numpy` |
+| **NLP / Sentiment** | `nltk` (VADER), `wordcloud` |
+| **Emoji Analysis** | `emoji`, `collections.Counter` |
+| **Visualization** | `matplotlib`, `seaborn`, `plotly.express` |
+| **Dashboard** | `streamlit` |
+| **Database** | `sqlalchemy`, `pymysql` (MySQL) |
+| **Deployment Data** | `pyarrow` (Parquet) |
+| **String Processing** | `string`, `os` |
+
+---
+
+## 📁 Repository Structure
+
+```
+Youtube_Data_Analysis/
+│
+├── 📓 youtube_data_analysis.ipynb   ← Main analysis notebook (225 cells)
+├── 🖥️  app.py                        ← Streamlit dashboard (6 pages)
+├── ⚙️  build_deployment_data.py      ← Parquet packaging script
+├── 📄  comments_data.csv             ← Comment records (691K rows)
+├── 📄  requirements.txt              ← Python dependencies
+│
+├── 📂 data/
+│   ├── youtube_videos.parquet        ← Compressed video dataset
+│   └── comments_sentiment.parquet   ← Pre-scored comment dataset
+│
+└── 📂 assets/
+    ├── img-1.png  →  img-6.png       ← Dashboard screenshots
+```
+
+> ⚠️ **Note:** `full_df.csv` is **not committed** to this repo (too large for GitHub). Generate it by running the notebook, or build from the packaged Parquet files.
+
+---
+
+## 🚀 Run Locally
+
+### Step 1 — Clone the Repository
+
+```bash
+git clone https://github.com/doyancha/Youtube_Data_Analysis.git
+cd Youtube_Data_Analysis
+```
+
+### Step 2 — Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### Step 3 — Prepare the Data
+
+**Option A:** You already have `full_df.csv` — place it in the project root.
+
+**Option B:** Regenerate from the notebook — run all cells in `youtube_data_analysis.ipynb`, then export:
+
+```python
+full_df.to_csv("full_df.csv", index=False)
+```
+
+**Option C:** Build compressed Parquet files for cloud deployment:
+
+```bash
+python build_deployment_data.py
+```
+
+### Step 4 — Launch the Dashboard
+
+```bash
+streamlit run app.py
+```
+
+The app will open at `http://localhost:8501` 🎉
+
+### ⚡ Requirements
+
+```txt
+streamlit
+pandas
+numpy
+plotly
+matplotlib
+seaborn
+wordcloud
+nltk
+emoji
+sqlalchemy
+pymysql
+pyarrow
+```
 
 ---
 
 ## Dashboard Preview
+
 
 The repository includes exported dashboard screenshots in the [`assets`](./assets) folder so visitors can preview the interface before running the app locally.
 
@@ -194,183 +443,92 @@ The repository includes exported dashboard screenshots in the [`assets`](./asset
   </tr>
 </table>
 
----
+<div align="center">
 
-## Data Sources Used
+> The dashboard uses a **dark neon-glassmorphism** design language — built to feel like a modern BI product, not a notebook export.
 
-### `full_df.csv`
+| Page | Description |
+|------|-------------|
+| 🏠 **Overview** | Executive KPIs, views/likes scatter, trending channel bar chart, correlation heatmap |
+| 📈 **Content Patterns** | Category like rates, reach-to-engagement behavior, punctuation impact |
+| 🔍 **Channel & Category Explorer** | Filterable KPI strip, creator comparisons, filtered scatter |
+| 💬 **Audience Sentiment** | Sentiment mix donut, score distribution, punctuation vs. reaction |
+| ☁️ **Word Clouds** | Positive/negative word clouds, most frequent terms |
+| 🏁 **Final Takeaway** | Strategic recommendation cards for creators and analysts |
 
-Primary enriched YouTube dataset containing:
-
-- views
-- likes
-- dislikes
-- comment_count
-- category_name
-- channel_title
-- like_rate
-- dislike_rate
-- comment_count_rate
-- punc_count
-
-> **Important:** `full_df.csv` is not committed to the repository because the file is too large for standard GitHub storage. To run the dashboard successfully, place the prepared `full_df.csv` file in the project root beside `app.py`.
-
-### `data/youtube_videos.parquet`
-
-Deployment-ready video dataset generated from `full_df.csv`. It keeps only the columns required by the Streamlit dashboard and stores them in compressed parquet format for faster loading and easier cloud deployment.
-
-### `comments_data.csv`
-
-Comment-level dataset used for:
-
-- sentiment scoring
-- positive/negative word clouds
-- supporting audience-language analysis
-
-### `data/comments_sentiment.parquet`
-
-Deployment-ready sampled comment dataset with precomputed sentiment labels. This avoids re-scoring comments during every app run and keeps the hosted app lighter.
+</div>
 
 ---
 
-## Technical Stack
-
-- **Python**
-- **Streamlit**
-- **Pandas**
-- **NumPy**
-- **Plotly**
-- **Matplotlib**
-- **Seaborn**
-- **WordCloud**
-- **NLTK Sentiment Analyzer** with fallback logic when unavailable
-
----
-
-## Repository Structure
-
-```text
-youtube data analysis/
-|-- app.py
-|-- comments_data.csv
-|-- build_deployment_data.py
-|-- data/
-|   |-- youtube_videos.parquet
-|   `-- comments_sentiment.parquet
-|-- full_df.csv
-`-- youtube_data_analysis.ipynb
-```
-
----
-
-## Deployment Data Workflow
-
-The app now supports a deployment-first data path. When these packaged files exist, `app.py` will automatically use them instead of reading the large raw CSV:
-
-```text
-data/
-|-- youtube_videos.parquet
-`-- comments_sentiment.parquet
-```
-
-### Build the packaged deployment files
-
-Run the packaging script from the project root:
-
-```bash
-python build_deployment_data.py
-```
-
-This script:
-
-- reads your local `full_df.csv`
-- keeps only the app-required video columns
-- converts the video dataset into a compressed parquet file
-- samples comment text from `comments_data.csv`
-- precomputes sentiment labels
-- saves deployment-ready files into the `data/` folder
-
-Once those files are created, the Streamlit app can run without `full_df.csv` being uploaded to GitHub.
-
----
-
-## How To Prepare `full_df.csv`
-
-The dashboard expects a preprocessed dataset named `full_df.csv` in the root project directory.
-
-### Option 1. Use your existing prepared file
-
-If you already generated `full_df.csv` locally, place it in:
-
-```text
-youtube data analysis/full_df.csv
-```
-
-### Option 2. Regenerate it from the notebook
-
-Use [youtube_data_analysis.ipynb](C:\Users\MIR SHAHADUT HOSSAIN\DATA ANALYTICS PROJECTS\YOUTUBE DATA ANALYSIS\enhanced\youtube_data_analysis.ipynb) as the source workflow for rebuilding the enriched dataset. The notebook contains the feature-engineering logic used for:
-
-- category enrichment
-- like, dislike, and comment rate calculation
-- punctuation count creation
-- sentiment-related preparation
-
-After regenerating the enriched dataframe, export it as:
-
-```python
-full_df.to_csv("full_df.csv", index=False)
-```
-
-### Required file placement
-
-For local regeneration, keep the following source files in the same directory:
-
-```text
-youtube data analysis/
-|-- app.py
-|-- full_df.csv
-|-- comments_data.csv
-```
-
-If `full_df.csv` is missing, the dashboard can still run as long as the packaged parquet files already exist inside `data/`.
-
----
-
-## Run Locally
-
-### 1. Install dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
-### 2. Start the dashboard
-
-```bash
-streamlit run app.py
-```
-
----
-
-## Why This Project Matters
-
-This project demonstrates the ability to:
-
-- build a complete analytical storytelling workflow from raw data to interactive application
-- design a polished decision-oriented dashboard in Streamlit
-- combine quantitative and qualitative signals in a single interface
-- turn exploratory notebook logic into structured product-style analytics
-- communicate insights in a professional, stakeholder-friendly format
-
----
-
-## Contact
+## 👤 About the Author
 
 <div align="center">
 
-**Mir Shahadut Hossain**  
-Data Analyst | Streamlit Developer
+```
+╔═══════════════════════════════════════════════════════════╗
+║                                                           ║
+║           MIR SHAHADUT HOSSAIN                            ║
+║           Data Analyst  |  Streamlit Developer            ║
+║                                                           ║
+║   Turning raw data into decisions — one dashboard         ║
+║   at a time.                                              ║
+║                                                           ║
+╚═══════════════════════════════════════════════════════════╝
+```
 
-[LinkedIn](https://www.linkedin.com/in/mir-shahadut-hossain/) | [GitHub](https://github.com/doyancha) | [Email](mailto:sujon6901@gmail.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Mir%20Shahadut%20Hossain-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mir-shahadut-hossain/)
+[![GitHub](https://img.shields.io/badge/GitHub-doyancha-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/doyancha)
+[![Email](https://img.shields.io/badge/Email-sujon6901%40gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:sujon6901@gmail.com)
+[![Live App](https://img.shields.io/badge/Live%20App-Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://youtube-data-analysis.streamlit.app/)
+
+</div>
+
+---
+
+## 📚 Suggested Resources
+
+### 📖 Documentation & Libraries Used
+
+| Resource | Link |
+|----------|------|
+| **Streamlit Docs** | [docs.streamlit.io](https://docs.streamlit.io) |
+| **Pandas Documentation** | [pandas.pydata.org/docs](https://pandas.pydata.org/docs) |
+| **Plotly Express** | [plotly.com/python/plotly-express](https://plotly.com/python/plotly-express) |
+| **NLTK VADER Sentiment** | [nltk.org/api/nltk.sentiment.vader](https://www.nltk.org/api/nltk.sentiment.vader.html) |
+| **WordCloud Library** | [amueller.github.io/word_cloud](https://amueller.github.io/word_cloud/) |
+| **Seaborn Gallery** | [seaborn.pydata.org/examples](https://seaborn.pydata.org/examples/index.html) |
+| **emoji (PyPI)** | [pypi.org/project/emoji](https://pypi.org/project/emoji/) |
+| **SQLAlchemy** | [docs.sqlalchemy.org](https://docs.sqlalchemy.org/) |
+
+### 📂 Datasets
+
+| Resource | Link |
+|----------|------|
+| **Kaggle: YouTube Trending Videos** | [kaggle.com/datasets/datasnaek/youtube-new](https://www.kaggle.com/datasets/datasnaek/youtube-new) |
+| **Kaggle: YouTube Comments** | [kaggle.com/datasets/datasnaek/youtube](https://www.kaggle.com/datasets/datasnaek/youtube) |
+
+### 🎓 Learning References
+
+| Topic | Link |
+|-------|------|
+| **Sentiment Analysis with VADER** | [medium.com — VADER guide](https://medium.com/analytics-vidhya/simplifying-social-media-sentiment-analysis-using-vader-in-python-f9e6ec6fc52f) |
+| **Python Encoding Guide** | [docs.python.org/encoding](https://docs.python.org/3/library/codecs.html#standard-encodings) |
+| **Streamlit App Deployment** | [docs.streamlit.io/streamlit-community-cloud](https://docs.streamlit.io/streamlit-community-cloud/get-started) |
+| **Parquet with Pandas** | [pandas.pydata.org/parquet](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.to_parquet.html) |
+| **Plotly for Dashboards** | [plotly.com/python/getting-started](https://plotly.com/python/getting-started/) |
+| **Data Storytelling Principles** | [storytellingwithdata.com](https://www.storytellingwithdata.com/) |
+
+---
+
+<div align="center">
+
+```
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  Built with  ❤️  by Mir Shahadut Hossain  |  2025–2026
+  Data Analyst · Python Developer · Streamlit Builder
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+```
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=120&section=footer" width="100%"/>
 
 </div>
