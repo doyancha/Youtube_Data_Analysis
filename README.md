@@ -438,8 +438,8 @@ Youtube_Data_Analysis/
 ├── 📂 assets/
 │   ├── img-1.png  → img-6.png       ← Dashboard screenshots
 │
-└── 🔗 Resources Link
-    └── Additional Data: full_df.csv
+└── 🔗 Resources Link               ← Additional Databases, full_df.csv (google drive link)
+
 
 
 ```
