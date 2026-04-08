@@ -164,7 +164,7 @@ The notebook is organized into **11 distinct analytical sections**, each buildin
 - Applied to 691,400+ comment records
 </div>
 
-<div align="center">
+<div align="left">
   <pre style="display: inline-block; text-align: left; background: #0f172a; color: #e2e8f0; padding: 16px 20px; border-radius: 14px; border: 1px solid #334155; box-shadow: 0 8px 24px rgba(0,0,0,0.18); font-family: Consolas, monospace; font-size: 14px;">
 def get_sentiment(text):
     score = analyzer.polarity_scores(str(text))
@@ -226,6 +226,7 @@ df['sentiment_score'] = df['comment_text'].apply(get_sentiment)
 
 ### 📐 Module 7 — Engagement Rate Engineering
 > *Raw counts lie. Rates tell the truth.*
+
 <div align="left">
   
 Three derived metrics computed as a percentage of views:
