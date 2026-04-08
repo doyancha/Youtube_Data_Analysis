@@ -142,11 +142,13 @@ The notebook is organized into **11 distinct analytical sections**, each buildin
 ### 🧹 Module 1 — Data Ingestion & Cleaning
 > *Foundation before insight.*
 
+<div align="left">
+  
 - Multi-country CSV loading with encoding handling (`utf-8`, `latin-1`, `ISO-8859-1`)
 - Null detection and removal via `dropna()`
 - Deduplication across merged country datasets
 - Export pipeline: `.csv` → `.json` → MySQL DB via SQLAlchemy
-
+</div>
 ---
 
 ### 💬 Module 2 — Sentiment Analysis
