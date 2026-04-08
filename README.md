@@ -27,18 +27,25 @@
 
 <div align="center">
 
-## ⚡ THE CORE QUESTION
+<div align="center">
 
-```
+<div align="center">
+
+<h2 style="margin-bottom: 14px;">⚡ THE CORE QUESTION</h2>
+
+<div style="display: inline-block; padding: 18px 24px; border-radius: 18px; background: linear-gradient(135deg, #0f172a 0%, #111827 100%); border: 1px solid #334155; box-shadow: 0 10px 30px rgba(0,0,0,0.25);">
+  <pre style="margin: 0; color: #e2e8f0; font-size: 15px; line-height: 1.5; font-family: Consolas, Monaco, monospace; text-align: left;">
 ╔══════════════════════════════════════════════════════════════════════════╗
 ║                                                                          ║
-║   How does YouTube content convert VISIBILITY into ENGAGEMENT            ║
-║                   and AUDIENCE RESPONSE?                                 ║
+║        How does YouTube content convert VISIBILITY into ENGAGEMENT       ║
+║                         and AUDIENCE RESPONSE?                           ║
 ║                                                                          ║
 ╚══════════════════════════════════════════════════════════════════════════╝
-```
+  </pre>
+</div>
 
 </div>
+
 
 ---
 
