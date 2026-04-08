@@ -80,7 +80,9 @@ The app combines engagement metrics, creator/category comparisons, correlation a
 > This project was built to go **beyond surface-level metrics** — treating YouTube's trending data not as a curiosity, but as a mirror into how digital content earns and sustains public attention.
 
 ### 🔭 What This Project Sets Out To Do
+
 <div align="left">
+  
 - 📌 **Decode engagement dynamics** — understand whether a video truly *earns* its views or just stumbles into them
 - 📌 **Profile creator momentum** — identify channels that trend repeatedly versus those with one-off spikes
 - 📌 **Measure category efficiency** — determine which content categories convert visibility into actual engagement most effectively
