@@ -226,9 +226,10 @@ df['sentiment_score'] = df['comment_text'].apply(get_sentiment)
 
 ### 📐 Module 7 — Engagement Rate Engineering
 > *Raw counts lie. Rates tell the truth.*
-
+<div align="left">
+  
 Three derived metrics computed as a percentage of views:
-
+</div>
 <div align="center">
 
 <h3 style="margin-bottom: 12px; color: #0f172a;">Metric Formulas</h3>
@@ -243,10 +244,11 @@ comment_count_rate = (comment_count / views) × 100
 
 </div>
 <br>
+<div align="left">
 
 - 1×3 subplot grid showing rate distributions per category
 - Reveals hidden performers vs. inflated-view content
-
+</div>
 ---
 
 ### 🔗 Module 8 — Correlation Analysis
@@ -274,9 +276,7 @@ Interactive Plotly bar chart with color gradient by count
 ### ✏️ Module 10 — Punctuation Analysis
 > *Does expressive formatting drive stronger reactions?*
 
-<div align="center">
-
-<h3 style="margin-bottom: 12px; color: #0f172a;">Punctuation Feature Engineering</h3>
+<div align="left">
 
 <div style="display: inline-block; padding: 18px 24px; border-radius: 18px; background: linear-gradient(135deg, #0f172a 0%, #111827 100%); border: 1px solid #334155; box-shadow: 0 10px 28px rgba(0,0,0,0.22);">
   <pre style="margin: 0; color: #e2e8f0; font-family: Consolas, Monaco, monospace; font-size: 14px; line-height: 1.75; text-align: left;">
