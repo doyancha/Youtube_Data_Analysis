@@ -180,39 +180,48 @@ df['sentiment_score'] = df['comment_text'].apply(get_sentiment)
 ### ☁️ Module 3 — Word Cloud Generation
 > *What language defines positive vs. negative engagement?*
 
+<div align="left">
+
+
 - Separated corpora: positive comments vs. negative comments
 - Stop-word filtering using `wordcloud.STOPWORDS`
 - Side-by-side 18×7 matplotlib visualization
 - Reveals dominant vocabulary patterns in audience reactions
-
+</div>
 ---
 
 ### 😄 Module 4 — Emoji Frequency Analysis
 > *The unspoken language of YouTube comments.*
 
+<div align="left">
+
 - Emoji extraction using the `emoji` library's `emoji_list()` function
 - Top-10 most-used emojis ranked by frequency
 - Interactive Plotly bar chart for visual exploration
 - Provides cultural and emotional context beyond text
-
+</div>
 ---
 
 ### 🗺️ Module 5 — Multi-Country Data Merge
 > *Scale before depth.*
 
+<div align="left">
+
 - Iterates all `*videos.csv` files from multiple country datasets
 - Unified `full_df` DataFrame with consistent schema
 - Shape validation post-merge
-
+</div>
 ---
 
 ### 🏷️ Module 6 — Category Enrichment
 > *Numbers mean nothing without context.*
 
+<div align="left">
+
 - Parsed `_category_id.json` to build `cat_dict = {id: name}`
 - Mapped numeric IDs to readable labels (e.g., `10` → `"Music"`)
 - Seaborn strip plot of `likes` distribution per category
-
+</div>
 ---
 
 ### 📐 Module 7 — Engagement Rate Engineering
@@ -243,19 +252,23 @@ comment_count_rate = (comment_count / views) × 100
 ### 🔗 Module 8 — Correlation Analysis
 > *How tightly do these signals move together?*
 
+<div align="left">
+
 Pearson correlation matrix: `views`, `likes`, `dislikes`
 Seaborn `regplot` for `views` vs `likes` with regression line
 Annotated heatmap for full numeric intuition
-
+</div>
 ---
 
 ### 📺 Module 9 — Channel Trending Analysis
 > *Who dominates the trending tab — and how often?*
 
+<div align="left">
+
 `value_counts()` on `channel_title` across all records
 Top 20 most-trending channels ranked
 Interactive Plotly bar chart with color gradient by count
-
+</div>
 ---
 
 ### ✏️ Module 10 — Punctuation Analysis
@@ -285,15 +298,19 @@ full_df['punc_count'] = full_df['title'].apply(punctuation_count)
 ### 💾 Module 11 — Export & Deployment Packaging
 > *From notebook to production.*
 
+<div align="left">
+
 - `build_deployment_data.py` script packages raw data into compressed Parquet files
 - Eliminates need to upload 600MB+ CSV to cloud
 - Streamlit app detects `data/*.parquet` and loads from there automatically
-
+</div>
 ---
 
 ## 💡 Key Findings
 
 > Here's what the data actually says — straight from the analysis.
+
+<div align="left">
 
 ### 🔑 Finding 1 — Views & Likes Move Together, But Not Perfectly
 The correlation between views and likes is **0.78** — strong, but not deterministic. Some videos accumulate massive view counts without proportional likes, suggesting passive viewership. The best-performing content earns *active* approval, not just passive impressions.
@@ -312,7 +329,7 @@ Positive comments are dominated by words of admiration and entertainment. Negati
 
 ### 🔑 Finding 6 — Title Punctuation as a Behavioral Signal
 Videos with moderate punctuation in titles show marginally higher engagement across all metrics. However, this is a *supporting signal* — expressive formatting may correlate with a certain content personality type rather than directly causing engagement.
-
+</div>
 ---
 
 ## 🧠 Technical Pipeline
