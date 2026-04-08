@@ -90,8 +90,10 @@ The app combines engagement metrics, creator/category comparisons, correlation a
 - 📌 **Explore language signals** — investigate whether structural cues in video titles (like punctuation) correlate with stronger audience reactions
 - 📌 **Build a production-grade dashboard** — not just a notebook, but a fully deployed, stakeholder-ready analytics application
 - 📌 **Demonstrate end-to-end data storytelling** — from raw CSV ingestion to interactive visual narrative
+</div>
 
 ### 🧩 Business Questions Addressed
+<div align="left">
 
 - Which content categories drive the strongest **like rates**?
 - Which creators sustain **repeated trending** presence over time?
@@ -150,13 +152,15 @@ The notebook is organized into **11 distinct analytical sections**, each buildin
 ### 💬 Module 2 — Sentiment Analysis
 > *What does the audience actually feel?*
 
+<div align="left">
+
 - NLTK **VADER** (Valence Aware Dictionary and sEntiment Reasoner) for comment scoring
 - Compound score range: `−1.0` (most negative) → `+1.0` (most positive)
 - Classification thresholds:
   - **Positive:** `score ≥ 0.5`
   - **Negative:** `score ≤ −0.5`
 - Applied to 691,400+ comment records
-
+</div>
 
 <div align="center">
   <pre style="display: inline-block; text-align: left; background: #0f172a; color: #e2e8f0; padding: 16px 20px; border-radius: 14px; border: 1px solid #334155; box-shadow: 0 8px 24px rgba(0,0,0,0.18); font-family: Consolas, monospace; font-size: 14px;">
