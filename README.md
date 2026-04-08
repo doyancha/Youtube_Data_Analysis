@@ -452,9 +452,11 @@ Youtube_Data_Analysis/
 │
 └── 🔗 Resources Link               ← Additional Databases, full_df.csv (google drive link)
 
-</div>
+
 
 ```
+</div>
+
 
 > ⚠️ **Note:** `full_df.csv` is **not committed** to this repo (too large for GitHub). Generate it by running the notebook, or build from the packaged Parquet files.
 
@@ -464,6 +466,8 @@ Youtube_Data_Analysis/
 
 ### Step 1 — Clone the Repository
 
+<div align="left">
+  
 ```bash
 git clone https://github.com/doyancha/Youtube_Data_Analysis.git
 cd Youtube_Data_Analysis
@@ -471,11 +475,15 @@ cd Youtube_Data_Analysis
 
 ### Step 2 — Install Dependencies
 
+<div align="left">
+
 ```bash
 pip install -r requirements.txt
 ```
 
 ### Step 3 — Prepare the Data
+
+<div align="left">
 
 **Option A:** You already have `full_df.csv` — place it in the project root.
 
@@ -485,12 +493,13 @@ pip install -r requirements.txt
 full_df.to_csv("full_df.csv", index=False)
 ```
 
+
 **Option C:** Build compressed Parquet files for cloud deployment:
 
 ```bash
 python build_deployment_data.py
 ```
-
+</div>
 ### Step 4 — Launch the Dashboard
 
 ```bash
