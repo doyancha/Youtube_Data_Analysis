@@ -33,6 +33,9 @@ st.set_page_config(
 
 DATA_PATH = Path("full_df.csv")
 COMMENTS_PATH = Path("comments_data.csv")
+DEPLOY_DATA_DIR = Path("data")
+PACKAGED_VIDEO_PATH = DEPLOY_DATA_DIR / "youtube_videos.parquet"
+PACKAGED_COMMENTS_PATH = DEPLOY_DATA_DIR / "comments_sentiment.parquet"
 NUMERIC_COLUMNS = [
     "views",
     "likes",
@@ -433,8 +436,12 @@ def inject_css() -> None:
 
 @st.cache_data(show_spinner=False)
 def load_main_data(path: Path) -> pd.DataFrame:
-    df = pd.read_csv(path)
+    if path.suffix == ".parquet":
+        df = pd.read_parquet(path)
+    else:
+        df = pd.read_csv(path)
     df.columns = [col.replace("\ufeff", "").strip() for col in df.columns]
+    df = df.loc[:, ~df.columns.duplicated()]
 
     for col in NUMERIC_COLUMNS:
         if col in df.columns:
@@ -470,14 +477,23 @@ def load_comment_sentiment(path: Path, sample_size: int = 10000) -> pd.DataFrame
     if not path.exists():
         return pd.DataFrame()
 
-    comments = pd.read_csv(path, on_bad_lines="skip")
+    if path.suffix == ".parquet":
+        comments = pd.read_parquet(path)
+    else:
+        comments = pd.read_csv(path, on_bad_lines="skip")
     comments.columns = [col.replace("\ufeff", "").strip() for col in comments.columns]
+    comments = comments.loc[:, ~comments.columns.duplicated()]
     if "comment_text" not in comments.columns:
         return pd.DataFrame()
 
     comments = comments.dropna(subset=["comment_text"]).copy()
-    if len(comments) > sample_size:
+    if len(comments) > sample_size and "sentiment_score" not in comments.columns:
         comments = comments.sample(sample_size, random_state=42)
+
+    if "sentiment_score" in comments.columns and "sentiment_label" in comments.columns:
+        if "video_id" in comments.columns:
+            comments["video_id"] = comments["video_id"].astype(str)
+        return comments
 
     analyzer = None
     if SentimentIntensityAnalyzer is not None:
@@ -1419,11 +1435,14 @@ def main() -> None:
     inject_css()
     apply_plotly_defaults()
 
-    if not DATA_PATH.exists():
-        st.error("`full_df.csv` was not found beside `app.py`.")
+    video_source = PACKAGED_VIDEO_PATH if PACKAGED_VIDEO_PATH.exists() else DATA_PATH
+    comments_source = PACKAGED_COMMENTS_PATH if PACKAGED_COMMENTS_PATH.exists() else COMMENTS_PATH
+
+    if not video_source.exists():
+        st.error("No deployment dataset was found. Add `data/youtube_videos.parquet` or place `full_df.csv` beside `app.py`.")
         st.stop()
 
-    df = load_main_data(DATA_PATH)
+    df = load_main_data(video_source)
     validate_columns(
         df,
         [
@@ -1442,7 +1461,7 @@ def main() -> None:
     )
 
     active_page = render_sidebar_nav()
-    comments_df = load_comment_sentiment(COMMENTS_PATH)
+    comments_df = load_comment_sentiment(comments_source)
 
     if active_page == "Overview":
         render_hero(df)
