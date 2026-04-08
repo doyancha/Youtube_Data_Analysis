@@ -472,6 +472,7 @@ Youtube_Data_Analysis/
 git clone https://github.com/doyancha/Youtube_Data_Analysis.git
 cd Youtube_Data_Analysis
 ```
+</div>
 
 ### Step 2 — Install Dependencies
 
@@ -480,6 +481,7 @@ cd Youtube_Data_Analysis
 ```bash
 pip install -r requirements.txt
 ```
+</div>
 
 ### Step 3 — Prepare the Data
 
@@ -500,15 +502,21 @@ full_df.to_csv("full_df.csv", index=False)
 python build_deployment_data.py
 ```
 </div>
+
 ### Step 4 — Launch the Dashboard
+
+<div align="left">
 
 ```bash
 streamlit run app.py
 ```
 
 The app will open at `http://localhost:8501` 🎉
+</div>
 
 ### ⚡ Requirements
+
+<div align="left">
 
 ```txt
 streamlit==1.53.1
@@ -521,13 +529,15 @@ nltk==3.9.2
 wordcloud==1.9.6
 pyarrow==23.0.0
 ```
-
+</div>
 ---
 
 ## Dashboard Preview
 
+<div align="left">
 
 The repository includes exported dashboard screenshots in the [`assets`](./assets) folder so visitors can preview the interface before running the app locally.
+</div>
 
 <table>
   <tr>
