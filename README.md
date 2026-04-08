@@ -82,21 +82,21 @@ The app combines engagement metrics, creator/category comparisons, correlation a
 
 ### 🔭 What This Project Sets Out To Do
 
-- 📌 **Decode engagement dynamics** — understand whether a video truly *earns* its views or just stumbles into them
-- 📌 **Profile creator momentum** — identify channels that trend repeatedly versus those with one-off spikes
-- 📌 **Measure category efficiency** — determine which content categories convert visibility into actual engagement most effectively
-- 📌 **Analyze audience sentiment** — go beyond likes/dislikes to understand the *emotional tone* of comment sections at scale
-- 📌 **Explore language signals** — investigate whether structural cues in video titles (like punctuation) correlate with stronger audience reactions
-- 📌 **Build a production-grade dashboard** — not just a notebook, but a fully deployed, stakeholder-ready analytics application
-- 📌 **Demonstrate end-to-end data storytelling** — from raw CSV ingestion to interactive visual narrative
+📌 **Decode engagement dynamics** — understand whether a video truly *earns* its views or just stumbles into them
+📌 **Profile creator momentum** — identify channels that trend repeatedly versus those with one-off spikes
+📌 **Measure category efficiency** — determine which content categories convert visibility into actual engagement most effectively
+📌 **Analyze audience sentiment** — go beyond likes/dislikes to understand the *emotional tone* of comment sections at scale
+📌 **Explore language signals** — investigate whether structural cues in video titles (like punctuation) correlate with stronger audience reactions
+📌 **Build a production-grade dashboard** — not just a notebook, but a fully deployed, stakeholder-ready analytics application
+📌 **Demonstrate end-to-end data storytelling** — from raw CSV ingestion to interactive visual narrative
 
 ### 🧩 Business Questions Addressed
 
-- Which content categories drive the strongest **like rates**?
-- Which creators sustain **repeated trending** presence over time?
-- How strongly are **reach and approval** correlated — and where do they diverge?
-- What does **comment sentiment** reveal about audience reception beyond raw counts?
-- Do **title punctuation patterns** influence engagement metrics?
+Which content categories drive the strongest **like rates**?
+Which creators sustain **repeated trending** presence over time?
+How strongly are **reach and approval** correlated — and where do they diverge?
+What does **comment sentiment** reveal about audience reception beyond raw counts?
+Do **title punctuation patterns** influence engagement metrics?
 
 ---
 
@@ -139,22 +139,22 @@ The notebook is organized into **11 distinct analytical sections**, each buildin
 ### 🧹 Module 1 — Data Ingestion & Cleaning
 > *Foundation before insight.*
 
-- Multi-country CSV loading with encoding handling (`utf-8`, `latin-1`, `ISO-8859-1`)
-- Null detection and removal via `dropna()`
-- Deduplication across merged country datasets
-- Export pipeline: `.csv` → `.json` → MySQL DB via SQLAlchemy
+Multi-country CSV loading with encoding handling (`utf-8`, `latin-1`, `ISO-8859-1`)
+Null detection and removal via `dropna()`
+Deduplication across merged country datasets
+Export pipeline: `.csv` → `.json` → MySQL DB via SQLAlchemy
 
 ---
 
 ### 💬 Module 2 — Sentiment Analysis
 > *What does the audience actually feel?*
 
-- NLTK **VADER** (Valence Aware Dictionary and sEntiment Reasoner) for comment scoring
-- Compound score range: `−1.0` (most negative) → `+1.0` (most positive)
-- Classification thresholds:
+NLTK **VADER** (Valence Aware Dictionary and sEntiment Reasoner) for comment scoring
+Compound score range: `−1.0` (most negative) → `+1.0` (most positive)
+Classification thresholds:
   - **Positive:** `score ≥ 0.5`
   - **Negative:** `score ≤ −0.5`
-- Applied to 691,400+ comment records
+Applied to 691,400+ comment records
 
 ```python
 def get_sentiment(text):
@@ -169,38 +169,38 @@ df['sentiment_score'] = df['comment_text'].apply(get_sentiment)
 ### ☁️ Module 3 — Word Cloud Generation
 > *What language defines positive vs. negative engagement?*
 
-- Separated corpora: positive comments vs. negative comments
-- Stop-word filtering using `wordcloud.STOPWORDS`
-- Side-by-side 18×7 matplotlib visualization
-- Reveals dominant vocabulary patterns in audience reactions
+Separated corpora: positive comments vs. negative comments
+Stop-word filtering using `wordcloud.STOPWORDS`
+Side-by-side 18×7 matplotlib visualization
+Reveals dominant vocabulary patterns in audience reactions
 
 ---
 
 ### 😄 Module 4 — Emoji Frequency Analysis
 > *The unspoken language of YouTube comments.*
 
-- Emoji extraction using the `emoji` library's `emoji_list()` function
-- Top-10 most-used emojis ranked by frequency
-- Interactive Plotly bar chart for visual exploration
-- Provides cultural and emotional context beyond text
+Emoji extraction using the `emoji` library's `emoji_list()` function
+Top-10 most-used emojis ranked by frequency
+Interactive Plotly bar chart for visual exploration
+Provides cultural and emotional context beyond text
 
 ---
 
 ### 🗺️ Module 5 — Multi-Country Data Merge
 > *Scale before depth.*
 
-- Iterates all `*videos.csv` files from multiple country datasets
-- Unified `full_df` DataFrame with consistent schema
-- Shape validation post-merge
+Iterates all `*videos.csv` files from multiple country datasets
+Unified `full_df` DataFrame with consistent schema
+Shape validation post-merge
 
 ---
 
 ### 🏷️ Module 6 — Category Enrichment
 > *Numbers mean nothing without context.*
 
-- Parsed `_category_id.json` to build `cat_dict = {id: name}`
-- Mapped numeric IDs to readable labels (e.g., `10` → `"Music"`)
-- Seaborn strip plot of `likes` distribution per category
+Parsed `_category_id.json` to build `cat_dict = {id: name}`
+Mapped numeric IDs to readable labels (e.g., `10` → `"Music"`)
+Seaborn strip plot of `likes` distribution per category
 
 ---
 
@@ -215,26 +215,26 @@ dislike_rate       = (dislikes / views) × 100
 comment_count_rate = (comment_count / views) × 100
 ```
 
-- 1×3 subplot grid showing rate distributions per category
-- Reveals hidden performers vs. inflated-view content
+1×3 subplot grid showing rate distributions per category
+Reveals hidden performers vs. inflated-view content
 
 ---
 
 ### 🔗 Module 8 — Correlation Analysis
 > *How tightly do these signals move together?*
 
-- Pearson correlation matrix: `views`, `likes`, `dislikes`
-- Seaborn `regplot` for `views` vs `likes` with regression line
-- Annotated heatmap for full numeric intuition
+Pearson correlation matrix: `views`, `likes`, `dislikes`
+Seaborn `regplot` for `views` vs `likes` with regression line
+Annotated heatmap for full numeric intuition
 
 ---
 
 ### 📺 Module 9 — Channel Trending Analysis
 > *Who dominates the trending tab — and how often?*
 
-- `value_counts()` on `channel_title` across all records
-- Top 20 most-trending channels ranked
-- Interactive Plotly bar chart with color gradient by count
+ `value_counts()` on `channel_title` across all records
+Top 20 most-trending channels ranked
+Interactive Plotly bar chart with color gradient by count
 
 ---
 
@@ -248,17 +248,17 @@ def punctuation_count(text):
 full_df['punc_count'] = full_df['title'].apply(punctuation_count)
 ```
 
-- 2×2 subplot grid: `punc_count` vs `views`, `likes`, `dislikes`, `comment_count`
-- Treated as a behavioral signal, not a primary driver
+2×2 subplot grid: `punc_count` vs `views`, `likes`, `dislikes`, `comment_count`
+Treated as a behavioral signal, not a primary driver
 
 ---
 
 ### 💾 Module 11 — Export & Deployment Packaging
 > *From notebook to production.*
 
-- `build_deployment_data.py` script packages raw data into compressed Parquet files
-- Eliminates need to upload 600MB+ CSV to cloud
-- Streamlit app detects `data/*.parquet` and loads from there automatically
+`build_deployment_data.py` script packages raw data into compressed Parquet files
+Eliminates need to upload 600MB+ CSV to cloud
+Streamlit app detects `data/*.parquet` and loads from there automatically
 
 ---
 
