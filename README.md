@@ -425,17 +425,23 @@ Feature Engineering                                    Comment Processing
 Youtube_Data_Analysis/
 │
 ├── 📓 youtube_data_analysis.ipynb   ← Main analysis notebook (225 cells)
-├── 🖥️  app.py                        ← Streamlit dashboard (6 pages)
-├── ⚙️  build_deployment_data.py      ← Parquet packaging script
-├── 📄  comments_data.csv             ← Comment records (691K rows)
-├── 📄  requirements.txt              ← Python dependencies
+├── 🖥️ app.py                        ← Streamlit dashboard (6 pages)
+├── ⚙️ build_deployment_data.py      ← Parquet packaging script
+├── 📄 comments_data.csv             ← Comment records (691K rows)
+├── 📄 full_df.csv                   ← Full cleaned and enriched dataset
+├── 📄 requirements.txt              ← Python dependencies
 │
 ├── 📂 data/
-│   ├── youtube_videos.parquet        ← Compressed video dataset
+│   ├── youtube_videos.parquet       ← Compressed video dataset
 │   └── comments_sentiment.parquet   ← Pre-scored comment dataset
 │
-└── 📂 assets/
-    ├── img-1.png  →  img-6.png       ← Dashboard screenshots
+├── 📂 assets/
+│   ├── img-1.png  → img-6.png       ← Dashboard screenshots
+│
+└── 🔗 Resources Link
+    └── Additional Data: full_df.csv
+
+
 ```
 
 > ⚠️ **Note:** `full_df.csv` is **not committed** to this repo (too large for GitHub). Generate it by running the notebook, or build from the packaged Parquet files.
@@ -484,18 +490,15 @@ The app will open at `http://localhost:8501` 🎉
 ### ⚡ Requirements
 
 ```txt
-streamlit
-pandas
-numpy
-plotly
-matplotlib
-seaborn
-wordcloud
-nltk
-emoji
-sqlalchemy
-pymysql
-pyarrow
+streamlit==1.53.1
+pandas==2.3.3
+numpy==2.4.1
+matplotlib==3.10.8
+seaborn==0.13.2
+plotly==6.5.2
+nltk==3.9.2
+wordcloud==1.9.6
+pyarrow==23.0.0
 ```
 
 ---
