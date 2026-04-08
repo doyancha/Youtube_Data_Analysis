@@ -291,7 +291,7 @@ full_df['punc_count'] = full_df['title'].apply(punctuation_count)
 </div>
 <br>
 
-<div align="center">
+<div align="left">
 
 - 2×2 subplot grid: `punc_count` vs `views`, `likes`, `dislikes`, `comment_count`
 - Treated as a behavioral signal, not a primary driver
@@ -431,7 +431,7 @@ Feature Engineering                                    Comment Processing
 
 ## 📁 Repository Structure
 
-<div align="center">
+<div align="left">
 
 ```
 Youtube_Data_Analysis/
