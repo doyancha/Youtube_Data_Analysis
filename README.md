@@ -83,13 +83,13 @@ The app combines engagement metrics, creator/category comparisons, correlation a
 
 <div align="left">
   
-- 📌 **Decode engagement dynamics** — understand whether a video truly *earns* its views or just stumbles into them
-- 📌 **Profile creator momentum** — identify channels that trend repeatedly versus those with one-off spikes
-- 📌 **Measure category efficiency** — determine which content categories convert visibility into actual engagement most effectively
-- 📌 **Analyze audience sentiment** — go beyond likes/dislikes to understand the *emotional tone* of comment sections at scale
-- 📌 **Explore language signals** — investigate whether structural cues in video titles (like punctuation) correlate with stronger audience reactions
-- 📌 **Build a production-grade dashboard** — not just a notebook, but a fully deployed, stakeholder-ready analytics application
-- 📌 **Demonstrate end-to-end data storytelling** — from raw CSV ingestion to interactive visual narrative
+- 📌 **Decode engagement dynamics** also understand whether a video truly *earns* its views or just stumbles into them
+- 📌 **Profile creator momentum** and identify channels that trend repeatedly versus those with one-off spikes
+- 📌 **Measure category efficiency** as well as determine which content categories convert visibility into actual engagement most effectively
+- 📌 **Analyze audience sentiment** and go beyond likes/dislikes to understand the *emotional tone* of comment sections at scale
+- 📌 **Explore language signals** also investigate whether structural cues in video titles (like punctuation) correlate with stronger audience reactions
+- 📌 **Build a production-grade dashboard** not just a notebook, but a fully deployed, stakeholder-ready analytics application
+- 📌 **Demonstrate end-to-end data storytelling** from raw CSV ingestion to interactive visual narrative
 </div>
 
 ### 🧩 Business Questions Addressed
@@ -97,7 +97,7 @@ The app combines engagement metrics, creator/category comparisons, correlation a
 
 - Which content categories drive the strongest **like rates**?
 - Which creators sustain **repeated trending** presence over time?
-- How strongly are **reach and approval** correlated — and where do they diverge?
+- How strongly are **reach and approval** correlated and where do they diverge?
 - What does **comment sentiment** reveal about audience reception beyond raw counts?
 - Do **title punctuation patterns** influence engagement metrics?
 </div>
@@ -317,22 +317,22 @@ full_df['punc_count'] = full_df['title'].apply(punctuation_count)
 <div align="left">
 
 ### 🔑 Finding 1 — Views & Likes Move Together, But Not Perfectly
-The correlation between views and likes is **0.78** — strong, but not deterministic. Some videos accumulate massive view counts without proportional likes, suggesting passive viewership. The best-performing content earns *active* approval, not just passive impressions.
+The correlation between views and likes is **0.78** which is strong, but not deterministic. Some videos accumulate massive view counts without proportional likes, suggesting passive viewership. The best-performing content earns *active* approval, not just passive impressions.
 
 ### 🔑 Finding 2 — Category Efficiency Matters More Than Scale
-**Howto & Style** leads all categories in average Like Rate. This means content that *teaches* tends to generate more deliberate, appreciative engagement — even when raw view counts are modest compared to Entertainment or Music.
+**Howto & Style** leads all categories in average Like Rate. This means content that *teaches* tends to generate more deliberate, appreciative engagement even when raw view counts are modest compared to Entertainment or Music.
 
 ### 🔑 Finding 3 — Trending Success Is Not Random
-The channel with the highest recurring trending count was **The Late Show with Stephen Colbert** — appearing **710 times** in the dataset. This points to durable creator-level momentum, not viral luck. Consistent content cadence compounds into algorithmic staying power.
+The channel with the highest recurring trending count was **The Late Show with Stephen Colbert** appearing **710 times** in the dataset. This points to durable creator-level momentum, not viral luck. Consistent content cadence compounds into algorithmic staying power.
 
 ### 🔑 Finding 4 — Creator Brand Drives Raw Reach
 **NickyJamTV** led in total accumulated views. At the top of the distribution, raw reach is overwhelmingly driven by creator brand strength rather than category or title optimization.
 
 ### 🔑 Finding 5 — Sentiment Adds a Layer Beyond Raw Metrics
-Positive comments are dominated by words of admiration and entertainment. Negative comments cluster around criticism and controversy. High like counts alone can mask a divided comment section — sentiment analysis is the corrective lens.
+Positive comments are dominated by words of admiration and entertainment. Negative comments cluster around criticism and controversy. High like counts alone can mask a divided comment section sentiment analysis is the corrective lens.
 
 ### 🔑 Finding 6 — Title Punctuation as a Behavioral Signal
-Videos with moderate punctuation in titles show marginally higher engagement across all metrics. However, this is a *supporting signal* — expressive formatting may correlate with a certain content personality type rather than directly causing engagement.
+Videos with moderate punctuation in titles show marginally higher engagement across all metrics. However, this is a *supporting signal* expressive formatting may correlate with a certain content personality type rather than directly causing engagement.
 </div>
 ---
 
@@ -487,9 +487,9 @@ pip install -r requirements.txt
 
 <div align="left">
 
-**Option A:** You already have `full_df.csv` — place it in the project root.
+**Option A:** You already have `full_df.csv` also place it in the project root.
 
-**Option B:** Regenerate from the notebook — run all cells in `youtube_data_analysis.ipynb`, then export:
+**Option B:** Regenerate from the notebook and run all cells in `youtube_data_analysis.ipynb`, then export:
 
 ```python
 full_df.to_csv("full_df.csv", index=False)
@@ -554,7 +554,7 @@ The repository includes exported dashboard screenshots in the [`assets`](./asset
 
 <div align="center">
 
-> The dashboard uses a **dark neon-glassmorphism** design language — built to feel like a modern BI product, not a notebook export.
+> The dashboard uses a **dark neon-glassmorphism** design language built to feel like a modern BI product, not a notebook export.
 
 | Page | Description |
 |------|-------------|
