@@ -73,7 +73,8 @@ The app combines engagement metrics, creator/category comparisons, correlation a
 | 10 | [📚 Suggested Resources](#-suggested-resources) |
 
 ---
-
+<div align="left">
+  
 ## 🎯 Project Intention & Goals
 
 > This project was built to go **beyond surface-level metrics** — treating YouTube's trending data not as a curiosity, but as a mirror into how digital content earns and sustains public attention.
@@ -95,7 +96,7 @@ The app combines engagement metrics, creator/category comparisons, correlation a
 - How strongly are **reach and approval** correlated — and where do they diverge?
 - What does **comment sentiment** reveal about audience reception beyond raw counts?
 - Do **title punctuation patterns** influence engagement metrics?
-
+</div>
 ---
 
 ## 📊 Dataset at a Glance
