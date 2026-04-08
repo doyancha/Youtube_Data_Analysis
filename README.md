@@ -5,7 +5,27 @@
 </div>
 
 <div align="center">
-</p>
+
+<!-- <table>
+<tr>
+<td align="center">
+<a href="https://youtube-data-analysis.streamlit.app/">
+<img src="https://img.shields.io/badge/🚀%20LIVE%20APP-Streamlit%20Deploy-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white"/>
+</a>
+</td>
+<td align="center">
+<img src="https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white"/>
+</td>
+<td align="center">
+<img src="https://img.shields.io/badge/Jupyter-Notebook-F37626?style=for-the-badge&logo=jupyter&logoColor=white"/>
+</td>
+<td align="center">
+<img src="https://img.shields.io/badge/Status-Active-00C851?style=for-the-badge"/>
+</td>
+</tr>
+</table> -->
+
+<!-- p> -->
   <a href="https://www.linkedin.com/in/mir-shahadut-hossain/"><img src="https://img.shields.io/badge/LinkedIn-Mir%20Shahadut%20Hossain-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
   <a href="https://github.com/doyancha"><img src="https://img.shields.io/badge/GitHub-doyancha-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"></a>
   <a href="mailto:sujon6901@gmail.com"><img src="https://img.shields.io/badge/Email-sujon6901%40gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"></a>
@@ -24,8 +44,6 @@
 </div>
 
 ---
-
-<div align="center">
 
 <div align="center">
 
@@ -82,21 +100,21 @@ The app combines engagement metrics, creator/category comparisons, correlation a
 
 ### 🔭 What This Project Sets Out To Do
 
-📌 **Decode engagement dynamics** — understand whether a video truly *earns* its views or just stumbles into them
-📌 **Profile creator momentum** — identify channels that trend repeatedly versus those with one-off spikes
-📌 **Measure category efficiency** — determine which content categories convert visibility into actual engagement most effectively
-📌 **Analyze audience sentiment** — go beyond likes/dislikes to understand the *emotional tone* of comment sections at scale
-📌 **Explore language signals** — investigate whether structural cues in video titles (like punctuation) correlate with stronger audience reactions
-📌 **Build a production-grade dashboard** — not just a notebook, but a fully deployed, stakeholder-ready analytics application
-📌 **Demonstrate end-to-end data storytelling** — from raw CSV ingestion to interactive visual narrative
+- 📌 **Decode engagement dynamics** — understand whether a video truly *earns* its views or just stumbles into them
+- 📌 **Profile creator momentum** — identify channels that trend repeatedly versus those with one-off spikes
+- 📌 **Measure category efficiency** — determine which content categories convert visibility into actual engagement most effectively
+- 📌 **Analyze audience sentiment** — go beyond likes/dislikes to understand the *emotional tone* of comment sections at scale
+- 📌 **Explore language signals** — investigate whether structural cues in video titles (like punctuation) correlate with stronger audience reactions
+- 📌 **Build a production-grade dashboard** — not just a notebook, but a fully deployed, stakeholder-ready analytics application
+- 📌 **Demonstrate end-to-end data storytelling** — from raw CSV ingestion to interactive visual narrative
 
 ### 🧩 Business Questions Addressed
 
-Which content categories drive the strongest **like rates**?
-Which creators sustain **repeated trending** presence over time?
-How strongly are **reach and approval** correlated — and where do they diverge?
-What does **comment sentiment** reveal about audience reception beyond raw counts?
-Do **title punctuation patterns** influence engagement metrics?
+- Which content categories drive the strongest **like rates**?
+- Which creators sustain **repeated trending** presence over time?
+- How strongly are **reach and approval** correlated — and where do they diverge?
+- What does **comment sentiment** reveal about audience reception beyond raw counts?
+- Do **title punctuation patterns** influence engagement metrics?
 
 ---
 
@@ -139,68 +157,72 @@ The notebook is organized into **11 distinct analytical sections**, each buildin
 ### 🧹 Module 1 — Data Ingestion & Cleaning
 > *Foundation before insight.*
 
-Multi-country CSV loading with encoding handling (`utf-8`, `latin-1`, `ISO-8859-1`)
-Null detection and removal via `dropna()`
-Deduplication across merged country datasets
-Export pipeline: `.csv` → `.json` → MySQL DB via SQLAlchemy
+- Multi-country CSV loading with encoding handling (`utf-8`, `latin-1`, `ISO-8859-1`)
+- Null detection and removal via `dropna()`
+- Deduplication across merged country datasets
+- Export pipeline: `.csv` → `.json` → MySQL DB via SQLAlchemy
 
 ---
 
 ### 💬 Module 2 — Sentiment Analysis
 > *What does the audience actually feel?*
 
-NLTK **VADER** (Valence Aware Dictionary and sEntiment Reasoner) for comment scoring
-Compound score range: `−1.0` (most negative) → `+1.0` (most positive)
-Classification thresholds:
+- NLTK **VADER** (Valence Aware Dictionary and sEntiment Reasoner) for comment scoring
+- Compound score range: `−1.0` (most negative) → `+1.0` (most positive)
+- Classification thresholds:
   - **Positive:** `score ≥ 0.5`
   - **Negative:** `score ≤ −0.5`
-Applied to 691,400+ comment records
+- Applied to 691,400+ comment records
 
-```python
+
+<div align="center">
+  <pre style="display: inline-block; text-align: left; background: #0f172a; color: #e2e8f0; padding: 16px 20px; border-radius: 14px; border: 1px solid #334155; box-shadow: 0 8px 24px rgba(0,0,0,0.18); font-family: Consolas, monospace; font-size: 14px;">
 def get_sentiment(text):
     score = analyzer.polarity_scores(str(text))
     return score['compound']
 
 df['sentiment_score'] = df['comment_text'].apply(get_sentiment)
-```
+  </pre>
+</div>
+
 
 ---
 
 ### ☁️ Module 3 — Word Cloud Generation
 > *What language defines positive vs. negative engagement?*
 
-Separated corpora: positive comments vs. negative comments
-Stop-word filtering using `wordcloud.STOPWORDS`
-Side-by-side 18×7 matplotlib visualization
-Reveals dominant vocabulary patterns in audience reactions
+- Separated corpora: positive comments vs. negative comments
+- Stop-word filtering using `wordcloud.STOPWORDS`
+- Side-by-side 18×7 matplotlib visualization
+- Reveals dominant vocabulary patterns in audience reactions
 
 ---
 
 ### 😄 Module 4 — Emoji Frequency Analysis
 > *The unspoken language of YouTube comments.*
 
-Emoji extraction using the `emoji` library's `emoji_list()` function
-Top-10 most-used emojis ranked by frequency
-Interactive Plotly bar chart for visual exploration
-Provides cultural and emotional context beyond text
+- Emoji extraction using the `emoji` library's `emoji_list()` function
+- Top-10 most-used emojis ranked by frequency
+- Interactive Plotly bar chart for visual exploration
+- Provides cultural and emotional context beyond text
 
 ---
 
 ### 🗺️ Module 5 — Multi-Country Data Merge
 > *Scale before depth.*
 
-Iterates all `*videos.csv` files from multiple country datasets
-Unified `full_df` DataFrame with consistent schema
-Shape validation post-merge
+- Iterates all `*videos.csv` files from multiple country datasets
+- Unified `full_df` DataFrame with consistent schema
+- Shape validation post-merge
 
 ---
 
 ### 🏷️ Module 6 — Category Enrichment
 > *Numbers mean nothing without context.*
 
-Parsed `_category_id.json` to build `cat_dict = {id: name}`
-Mapped numeric IDs to readable labels (e.g., `10` → `"Music"`)
-Seaborn strip plot of `likes` distribution per category
+- Parsed `_category_id.json` to build `cat_dict = {id: name}`
+- Mapped numeric IDs to readable labels (e.g., `10` → `"Music"`)
+- Seaborn strip plot of `likes` distribution per category
 
 ---
 
@@ -209,14 +231,23 @@ Seaborn strip plot of `likes` distribution per category
 
 Three derived metrics computed as a percentage of views:
 
-```
+<div align="center">
+
+<h3 style="margin-bottom: 12px; color: #0f172a;">Metric Formulas</h3>
+
+<div style="display: inline-block; padding: 18px 24px; border-radius: 18px; background: linear-gradient(135deg, #0f172a 0%, #111827 100%); border: 1px solid #334155; box-shadow: 0 10px 28px rgba(0,0,0,0.22);">
+  <pre style="margin: 0; color: #e2e8f0; font-family: Consolas, Monaco, monospace; font-size: 14px; line-height: 1.75; text-align: left;">
 like_rate          = (likes / views) × 100
 dislike_rate       = (dislikes / views) × 100
 comment_count_rate = (comment_count / views) × 100
-```
+  </pre>
+</div>
 
-1×3 subplot grid showing rate distributions per category
-Reveals hidden performers vs. inflated-view content
+</div>
+<br>
+
+- 1×3 subplot grid showing rate distributions per category
+- Reveals hidden performers vs. inflated-view content
 
 ---
 
@@ -232,7 +263,7 @@ Annotated heatmap for full numeric intuition
 ### 📺 Module 9 — Channel Trending Analysis
 > *Who dominates the trending tab — and how often?*
 
- `value_counts()` on `channel_title` across all records
+`value_counts()` on `channel_title` across all records
 Top 20 most-trending channels ranked
 Interactive Plotly bar chart with color gradient by count
 
@@ -241,24 +272,33 @@ Interactive Plotly bar chart with color gradient by count
 ### ✏️ Module 10 — Punctuation Analysis
 > *Does expressive formatting drive stronger reactions?*
 
-```python
+<div align="center">
+
+<h3 style="margin-bottom: 12px; color: #0f172a;">Punctuation Feature Engineering</h3>
+
+<div style="display: inline-block; padding: 18px 24px; border-radius: 18px; background: linear-gradient(135deg, #0f172a 0%, #111827 100%); border: 1px solid #334155; box-shadow: 0 10px 28px rgba(0,0,0,0.22);">
+  <pre style="margin: 0; color: #e2e8f0; font-family: Consolas, Monaco, monospace; font-size: 14px; line-height: 1.75; text-align: left;">
 def punctuation_count(text):
     return len([char for char in text if char in string.punctuation])
 
 full_df['punc_count'] = full_df['title'].apply(punctuation_count)
-```
+  </pre>
+</div>
 
-2×2 subplot grid: `punc_count` vs `views`, `likes`, `dislikes`, `comment_count`
-Treated as a behavioral signal, not a primary driver
+</div>
+<br>
+
+- 2×2 subplot grid: `punc_count` vs `views`, `likes`, `dislikes`, `comment_count`
+- Treated as a behavioral signal, not a primary driver
 
 ---
 
 ### 💾 Module 11 — Export & Deployment Packaging
 > *From notebook to production.*
 
-`build_deployment_data.py` script packages raw data into compressed Parquet files
-Eliminates need to upload 600MB+ CSV to cloud
-Streamlit app detects `data/*.parquet` and loads from there automatically
+- `build_deployment_data.py` script packages raw data into compressed Parquet files
+- Eliminates need to upload 600MB+ CSV to cloud
+- Streamlit app detects `data/*.parquet` and loads from there automatically
 
 ---
 
@@ -288,20 +328,27 @@ Videos with moderate punctuation in titles show marginally higher engagement acr
 
 ## 🧠 Technical Pipeline
 
-```
+
+
+
+<div align="center">
+
+
+<div style="display: inline-block; padding: 20px 24px; border-radius: 18px; background: linear-gradient(135deg, #0f172a 0%, #111827 100%); border: 1px solid #334155; box-shadow: 0 10px 28px rgba(0,0,0,0.22);">
+  <pre style="margin: 0; color: #e2e8f0; font-family: Consolas, Monaco, monospace; font-size: 14px; line-height: 1.65; text-align: left;">
 Raw CSVs (Multi-Country)
         │
         ▼
    Data Cleaning ──────────────────────────────────────────────┐
    (null removal, dedup, encoding handling)                    │
-        │                                                       │
-        ▼                                                       ▼
+        │                                                      │
+        ▼                                                      ▼
 Feature Engineering                                    Comment Processing
 (like_rate, dislike_rate,                           (VADER sentiment scoring,
  comment_count_rate, punc_count,                     word cloud generation,
  category_name mapping)                              emoji frequency analysis)
-        │                                                       │
-        └───────────────────┬───────────────────────────────────┘
+        │                                                      │
+        └───────────────────┬──────────────────────────────────┘
                             │
                             ▼
                    Analysis & Visualization
@@ -314,20 +361,61 @@ Feature Engineering                                    Comment Processing
                             ▼
                Streamlit Dashboard (6 Pages)
               youtube-data-analysis.streamlit.app
-```
+  </pre>
+</div>
+
+</div>
+
+
 
 ### 🛠️ Tech Stack
 
-| Layer | Tools |
-|-------|-------|
-| **Data Wrangling** | `pandas`, `numpy` |
-| **NLP / Sentiment** | `nltk` (VADER), `wordcloud` |
-| **Emoji Analysis** | `emoji`, `collections.Counter` |
-| **Visualization** | `matplotlib`, `seaborn`, `plotly.express` |
-| **Dashboard** | `streamlit` |
-| **Database** | `sqlalchemy`, `pymysql` (MySQL) |
-| **Deployment Data** | `pyarrow` (Parquet) |
-| **String Processing** | `string`, `os` |
+
+<table align="center" style="border-collapse: collapse; width: 90%; max-width: 900px; overflow: hidden; border-radius: 14px;">
+  <thead>
+    <tr>
+      <th style="background: #0f172a; color: #ffffff; padding: 14px; border: 1px solid #334155;">Layer</th>
+      <th style="background: #0f172a; color: #ffffff; padding: 14px; border: 1px solid #334155;">Tools</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="background: #f8fafc; padding: 12px 14px; border: 1px solid #cbd5e1;"><strong>Data Wrangling</strong></td>
+      <td style="background: #f8fafc; padding: 12px 14px; border: 1px solid #cbd5e1;"><code>pandas</code>, <code>numpy</code></td>
+    </tr>
+    <tr>
+      <td style="background: #eef2ff; padding: 12px 14px; border: 1px solid #cbd5e1;"><strong>NLP / Sentiment</strong></td>
+      <td style="background: #eef2ff; padding: 12px 14px; border: 1px solid #cbd5e1;"><code>nltk</code> (VADER), <code>wordcloud</code></td>
+    </tr>
+    <tr>
+      <td style="background: #f8fafc; padding: 12px 14px; border: 1px solid #cbd5e1;"><strong>Emoji Analysis</strong></td>
+      <td style="background: #f8fafc; padding: 12px 14px; border: 1px solid #cbd5e1;"><code>emoji</code>, <code>collections.Counter</code></td>
+    </tr>
+    <tr>
+      <td style="background: #eef2ff; padding: 12px 14px; border: 1px solid #cbd5e1;"><strong>Visualization</strong></td>
+      <td style="background: #eef2ff; padding: 12px 14px; border: 1px solid #cbd5e1;"><code>matplotlib</code>, <code>seaborn</code>, <code>plotly.express</code></td>
+    </tr>
+    <tr>
+      <td style="background: #f8fafc; padding: 12px 14px; border: 1px solid #cbd5e1;"><strong>Dashboard</strong></td>
+      <td style="background: #f8fafc; padding: 12px 14px; border: 1px solid #cbd5e1;"><code>streamlit</code></td>
+    </tr>
+    <tr>
+      <td style="background: #eef2ff; padding: 12px 14px; border: 1px solid #cbd5e1;"><strong>Database</strong></td>
+      <td style="background: #eef2ff; padding: 12px 14px; border: 1px solid #cbd5e1;"><code>sqlalchemy</code>, <code>pymysql</code> (MySQL)</td>
+    </tr>
+    <tr>
+      <td style="background: #f8fafc; padding: 12px 14px; border: 1px solid #cbd5e1;"><strong>Deployment Data</strong></td>
+      <td style="background: #f8fafc; padding: 12px 14px; border: 1px solid #cbd5e1;"><code>pyarrow</code> (Parquet)</td>
+    </tr>
+    <tr>
+      <td style="background: #eef2ff; padding: 12px 14px; border: 1px solid #cbd5e1;"><strong>String Processing</strong></td>
+      <td style="background: #eef2ff; padding: 12px 14px; border: 1px solid #cbd5e1;"><code>string</code>, <code>os</code></td>
+    </tr>
+  </tbody>
+</table>
+
+
+
 
 ---
 
@@ -451,17 +539,25 @@ The repository includes exported dashboard screenshots in the [`assets`](./asset
 
 <div align="center">
 
-```
+<div align="center">
+
+<div style="display: inline-block; padding: 20px 24px; border-radius: 18px; background: linear-gradient(135deg, #0f172a 0%, #111827 100%); border: 1px solid #334155; box-shadow: 0 10px 28px rgba(0,0,0,0.22);">
+  <pre style="margin: 0; color: #e2e8f0; font-family: Consolas, Monaco, monospace; font-size: 14px; line-height: 1.65; text-align: left;">
 ╔═══════════════════════════════════════════════════════════╗
 ║                                                           ║
-║           MIR SHAHADUT HOSSAIN                            ║
-║           Data Analyst  |  Streamlit Developer            ║
+║                 MIR SHAHADUT HOSSAIN                      ║
+║            Data Analyst | Streamlit Developer             ║
 ║                                                           ║
-║   Turning raw data into decisions — one dashboard         ║
-║   at a time.                                              ║
+║      Turning raw data into decisions, one dashboard       ║
+║                       at a time.                          ║
 ║                                                           ║
 ╚═══════════════════════════════════════════════════════════╝
-```
+  </pre>
+</div>
+
+</div>
+
+<br>
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Mir%20Shahadut%20Hossain-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mir-shahadut-hossain/)
 [![GitHub](https://img.shields.io/badge/GitHub-doyancha-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/doyancha)
@@ -509,12 +605,19 @@ The repository includes exported dashboard screenshots in the [`assets`](./asset
 
 <div align="center">
 
-```
+<div align="center">
+
+<div style="display: inline-block; padding: 16px 22px; border-radius: 16px; background: linear-gradient(135deg, #111827 0%, #0f172a 100%); border: 1px solid #334155; box-shadow: 0 8px 24px rgba(0,0,0,0.18);">
+  <pre style="margin: 0; color: #e2e8f0; font-family: Consolas, Monaco, monospace; font-size: 14px; line-height: 1.7; text-align: center;">
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-  Built with  ❤️  by Mir Shahadut Hossain  |  2025–2026
+  Built with ❤️ by Mir Shahadut Hossain | 2025-2026
   Data Analyst · Python Developer · Streamlit Builder
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-```
+  </pre>
+</div>
+
+</div>
+<br>
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=120&section=footer" width="100%"/>
 
