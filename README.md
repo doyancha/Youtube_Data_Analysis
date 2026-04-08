@@ -5,27 +5,7 @@
 </div>
 
 <div align="center">
-
-<!-- <table>
-<tr>
-<td align="center">
-<a href="https://youtube-data-analysis.streamlit.app/">
-<img src="https://img.shields.io/badge/🚀%20LIVE%20APP-Streamlit%20Deploy-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white"/>
-</a>
-</td>
-<td align="center">
-<img src="https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white"/>
-</td>
-<td align="center">
-<img src="https://img.shields.io/badge/Jupyter-Notebook-F37626?style=for-the-badge&logo=jupyter&logoColor=white"/>
-</td>
-<td align="center">
-<img src="https://img.shields.io/badge/Status-Active-00C851?style=for-the-badge"/>
-</td>
-</tr>
-</table> -->
-
-
+</p>
   <a href="https://www.linkedin.com/in/mir-shahadut-hossain/"><img src="https://img.shields.io/badge/LinkedIn-Mir%20Shahadut%20Hossain-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
   <a href="https://github.com/doyancha"><img src="https://img.shields.io/badge/GitHub-doyancha-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"></a>
   <a href="mailto:sujon6901@gmail.com"><img src="https://img.shields.io/badge/Email-sujon6901%40gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"></a>
